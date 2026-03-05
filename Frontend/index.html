@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD - Descubra o Universo no seu Aniversário</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Orbitron:wght@600;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="space-container"></div>
+
+    <main class="container">
+        <header class="glass-panel text-center fade-in-up">
+            <h1>Descubra os Cosmos</h1>
+            <p>Veja que imagem a NASA capturou no dia que você nasceu (ou qualquer outra data especial).</p>
+
+            <form id="apod-form" class="date-form">
+                <div class="input-group">
+                    <label for="birthday-date">Sua Data (YYYY-MM-DD)</label>
+                    <input type="date" id="birthday-date" max="" required>
+                </div>
+                <button type="submit" id="submit-btn" class="glow-on-hover">Explorar</button>
+            </form>
+        </header>
+
+        <section id="loading-container" class="glass-panel text-center hidden">
+            <div class="loader"></div>
+            <p>Viajando pelo espaço-tempo...</p>
+        </section>
+
+        <section id="error-container" class="glass-panel text-center error hidden">
+            <h2 id="error-title">Houston, temos um problema!</h2>
+            <p id="error-message"></p>
+        </section>
+
+        <section id="result-container" class="glass-panel hidden fade-in-up">
+            <div class="result-header">
+                <h2 id="apod-title"></h2>
+                <span id="apod-date-display" class="date-badge"></span>
+            </div>
+
+            <div class="media-container">
+                <img id="apod-image" src="" alt="NASA APOD" class="hidden">
+                <iframe id="apod-video" src="" frameborder="0" allowfullscreen class="hidden"></iframe>
+            </div>
+
+            <div class="apod-description-container">
+                <p id="apod-explanation"></p>
+            </div>
+            <div class="copyright-info">
+                © <span id="apod-copyright">NASA</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
