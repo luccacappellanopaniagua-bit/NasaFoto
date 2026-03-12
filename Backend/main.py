@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-NASA_API_KEY = os.getenv("NASA_API_KEY", "DEMO_KEY")
+NASA_API_KEY = "TgcV5TgXRRCdBCAnfpIJTLBtdSj5oScYMtwVOXou"
 NASA_API_URL = "https://api.nasa.gov/planetary/apod"
 
 @app.get("/apod/{date}")
